@@ -26,7 +26,7 @@ useEffect(() => {
     .then((movies) => setMovies(movies));
 }, []);
 
-  console.log(user);
+  console.log(movies);
   if (!user) return <Login />;
   return (
 
