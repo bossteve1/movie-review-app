@@ -1,0 +1,17 @@
+span{
+    font-weight: bolder;
+    color: rgb(94, 0, 0);
+    cursor: pointer;
+}
+.button{
+    background-color: rgb(94, 0, 0) !important;
+}
+.form{
+    width: 90%;
+}
+.title{
+    font-weight: bold;
+    font-size: xx-large;
+    color: rgb(94, 0, 0);
+    margin: 4%;
+}
