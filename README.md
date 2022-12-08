@@ -2,6 +2,13 @@
 
 #### By Stephen Bosire
 
+## Table of Content
+
+- [Introduction](#introduction)
+- [Description](#description)
+- [Setup Requirements](#setup requirements)
+- [Technologies Used](#technologies used)
+
 ## INTRODUCTION
 
 This project is built using React for the front end, Rails API, and Render for hosting.
