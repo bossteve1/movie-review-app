@@ -6,8 +6,8 @@
 
 - [Introduction](#introduction)
 - [Description](#description)
-- [SetupRequirements](#setup requirements)
-- [TechnologiesUsed](#technologies used)
+- [SetupRequirements](#setuprequirements)
+- [TechnologiesUsed](#technologiesused)
 
 ## INTRODUCTION
 
