@@ -8,6 +8,7 @@
 - [Description](#description)
 - [SetupRequirements](#setuprequirements)
 - [TechnologiesUsed](#technologiesused)
+- [Contributor](#Contributor)
 
 ## INTRODUCTION
 
@@ -42,3 +43,7 @@ Here's the live link https://movie-review-app-tmiu.onrender.com
 * JavaScript
 * Bootsrap
 * Render
+
+
+## Contributor
+- [Stephen Nyabuto](https://github.com/bossteve1)
