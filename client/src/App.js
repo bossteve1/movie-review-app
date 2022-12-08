@@ -5,6 +5,7 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import SingleMovie from './components/SingleMovie'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,7 +27,7 @@ function App() {
       <Route path="/" element={<Home user={user} setUser={setUser}/>} exact />
       <Route path="/login" element={<Login onLogin={setUser}/>}exact/>
       <Route path="/signup" element={<Signup onLogin={setUser}/>}exact />
-     
+      <Route path="/movies/:id" element={<SingleMovie user={user}/>}exact />    
 
     </Routes>
     </div>

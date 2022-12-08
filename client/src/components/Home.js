@@ -34,10 +34,10 @@ useEffect(() => {
           <Nav
       activeKey="/home">
       <Nav.Item>
-        <Nav.Link href="/home">Active</Nav.Link>
+        <Nav.Link onClick={()=> history(`/`)}>MovieReview</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link >Home</Nav.Link>
+        <Nav.Link onClick={()=> history(`/`)}>Home</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link onClick={handleLogoutClick}>Logout</Nav.Link>
