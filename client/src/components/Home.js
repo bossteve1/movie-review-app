@@ -27,12 +27,12 @@ useEffect(() => {
 }, []);
 
   console.log(movies);
+  
   if (!user) return <Login />;
   return (
 
     <div>
-          <Nav
-      activeKey="/home">
+          <Nav>
       <Nav.Item>
         <Nav.Link onClick={()=> history(`/`)}>MovieReview</Nav.Link>
       </Nav.Item>
@@ -59,11 +59,11 @@ useEffect(() => {
 
           <Container>
              <Row>
-             {movies.map((movie) => (
+             {movies? movies.map((movie) => (
             <Col xs={12} md={4}className='p-5'>
             <MovieCard  movie={movie} key={movie.id}/>
             </Col>
-             ))}
+             )): null}
             
 
             </Row>

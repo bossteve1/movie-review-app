@@ -3,14 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 
-function Login({onLogin}) {
+function Login({setUser}) {
   const history = useNavigate()
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    e.stopPropagation()
     fetch("/login", {
       method: "POST",
       headers: {
@@ -19,11 +18,12 @@ function Login({onLogin}) {
       body: JSON.stringify({ username, password }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then(()=> history(`/`));
+        r.json().then(() => window.location.reload(false));
       } else {
         r.json().then((err) => alert(err.errors));
       }
     });
+    history('/')
   }
 
   return (

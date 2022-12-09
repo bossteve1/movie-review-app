@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button, Modal, Form, Nav} from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
+import { BsFillTrashFill } from "react-icons/bs";
 
 const SingleMovie = ({user, setUser}) => {
   const history = useNavigate()
@@ -44,6 +45,7 @@ const SingleMovie = ({user, setUser}) => {
       }
     });
     setShow(false)
+    window.location.reload(false);
   }
   
 
@@ -54,6 +56,11 @@ const SingleMovie = ({user, setUser}) => {
       .then((movie) => setMovie(movie));
   }, []);
 
+  function handleDelete() {
+      fetch(`/reviews/${id}`,
+       { method: 'DELETE' })
+          .then((data)=> console.log(data));
+  }
 
   return (
     <div>          
@@ -111,10 +118,11 @@ const SingleMovie = ({user, setUser}) => {
         Reviews : 
         {
           movie.reviews ? movie.reviews.map(review => (
-            <p>Review: {(Object.values(review).map((review)=>(
-              (review)
-            )))}</p>
-              
+           
+            <p>Review: {(Object.keys(review).map((revieww, index)=>(
+                review[revieww]              
+            )))} <button onClick={handleDelete}><BsFillTrashFill /></button> </p>
+              // console.log(review)
           ) ) : null
           
         }

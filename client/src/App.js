@@ -25,8 +25,8 @@ function App() {
     <div className="App">
     <Routes>
       <Route path="/" element={<Home user={user} setUser={setUser}/>} exact />
-      <Route path="/login" element={<Login onLogin={setUser}/>}exact/>
-      <Route path="/signup" element={<Signup onLogin={setUser}/>}exact />
+      <Route path="/login" element={<Login setUser={setUser}/>}exact/>
+      <Route path="/signup" element={<Signup />}exact />
       <Route path="/movies/:id" element={<SingleMovie user={user}/>}exact />    
 
     </Routes>
