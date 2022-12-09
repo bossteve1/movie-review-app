@@ -64,7 +64,7 @@ const SingleMovie = ({user, setUser}) => {
 
   return (
     <div>          
-      <Nav
+      <Nav className='button'
     activeKey="/home">
     <Nav.Item>
       <Nav.Link onClick={()=> history(`/`)}>MovieReview</Nav.Link>
@@ -89,7 +89,7 @@ const SingleMovie = ({user, setUser}) => {
         <p>Description: {movie.description}</p>
         <p>Duration: {movie.movie_length}</p>
         <p>Director: {movie.director}</p>
-        <Button onClick={handleShow}  type="button" className="btn btn-success mt-3">Add Review</Button> 
+        <Button onClick={handleShow}  type="button" className="btn btn-success button mt-3">Add Review</Button> 
 
         <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
@@ -106,7 +106,7 @@ const SingleMovie = ({user, setUser}) => {
         <Form.Label>Rating</Form.Label>
         <Form.Control type="number" placeholder="Rating" value={rating} onChange={(e) => setRating(e.target.value)}/>
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button className='button' variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
     </Form>

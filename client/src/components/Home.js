@@ -32,7 +32,7 @@ useEffect(() => {
   return (
 
     <div>
-          <Nav>
+          <Nav className='button'>
       <Nav.Item>
         <Nav.Link onClick={()=> history(`/`)}>MovieReview</Nav.Link>
       </Nav.Item>
@@ -48,7 +48,7 @@ useEffect(() => {
     </Nav>
 
     <div className='Home text-center'>
-           <p className='text-center  fw-bold title'>
+           <p className=' hit text-center fw-bold title'>
             Hit <br/> or <br/>Miss
            </p> 
            <p className=' find text-center fs-3'>

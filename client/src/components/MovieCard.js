@@ -14,7 +14,7 @@ const MovieCard = ({movie}) => {
     <Card.Img height="200" variant="top" src={movie.image_url} />
     <Card.Body>
       <Card.Title>{movie.title}</Card.Title>
-      <Button onClick={() => {navigate (`/Movies/${movie.id}`)} }  type="button" className="btn btn-success mt-3">view Movie</Button> 
+      <Button onClick={() => {navigate (`/Movies/${movie.id}`)} }  type="button" className="btn btn-success button mt-3">view Movie</Button> 
     </Card.Body>
   </Card>  
 
